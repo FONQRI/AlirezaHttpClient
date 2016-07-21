@@ -9,7 +9,7 @@ Simple example:
 		a.setMethod(AlirezaHttpClient::GET);
 		a.setParam("license", "12345");
 		a.setPath("/Service_Portal.asmx/ReceiveANPR");
-		a.sendAsync("www.sku.ac.ir", [] (string header,string body) { cout << "body: " << header << endl << body << endl; });
+		a.sendAsync("www.sku.ac.ir", [] (string header,string body) { cout << header << endl << body });
 		a.waitForResult();
 	}
 	catch (runtime_error e) {
